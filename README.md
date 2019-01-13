@@ -3,7 +3,7 @@ An extension of previous models built that allows for stochastic gradient descen
 
 The following model uses Tensorflows low level API to construct an MLP (fully connected neural net) that can be used for multi-class 
 classification. The model uses stochastic gradient descent and an Adam Optimization routine to minimize a softmax cross entropy
-objective function
+objective function, and also uses drop out as a regularization method.
 
 The model was originally built to classify the outcome of crimes as part of a kaggle competition from a dataset that can be found at
 
