@@ -124,7 +124,7 @@ class Classifier():
             layers[name] = tf.nn.dropout(layers[name], keep_proba)
 
         output = self.fc_layer(
-            name='output', input_tensor=layers[name], n_units=n_classes, activation_fn=tf.nn.tanh)
+            name='output', input_tensor=layers[name], n_units=n_classes, activation_fn=None)
 
         y_pred = {'probabilities': tf.nn.softmax(output, name='probabilities'), 'labels': tf.cast(
             tf.argmax(output, axis=1), tf.int64, name='labels')}
